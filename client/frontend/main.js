@@ -1,6 +1,6 @@
 "use strict";
 
-import style from "../less/index.less";
+import style from "../less/theme.less";
 
 console.log("Frontend loaded!");
 
