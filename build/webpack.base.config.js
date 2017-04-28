@@ -9,21 +9,7 @@ module.exports = {
 	entry: {
 		app: ["./client/app/main.js"],
 		vendor: [
-			"es6-promise",
-			"vue",
-			"vue-router",
-			"vuex",
-			"lodash",
-			"moment",
-			"jquery",
-			"axios",
-			"toastr",
-			"vue-form-generator",
-			"vue-websocket",
-			"apollo-client",
-			"graphql-tag",
-			"i18next",
-			"bootstrap-loader"
+
 		],
 		frontend: ["./client/frontend/main.js"]
 	},
