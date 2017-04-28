@@ -30,7 +30,11 @@ module.exports = merge(baseWpConfig, {
 				test: /\.less$/,
 				loader: ExtractTextPlugin.extract({
 					fallbackLoader: "style-loader",
-					loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+					loader: [{
+						loader: "css-loader",
+					}, {
+						loader: "less-loader"
+					}]
 				})
 			}, {
 				test: /\.vue$/,
