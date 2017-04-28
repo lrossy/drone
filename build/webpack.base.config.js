@@ -22,7 +22,8 @@ module.exports = {
 			"vue-websocket",
 			"apollo-client",
 			"graphql-tag",
-			"i18next"
+			"i18next",
+			"bootstrap-loader"
 		],
 		frontend: ["./client/frontend/main.js"]
 	},
@@ -54,7 +55,7 @@ module.exports = {
 					name: "images/[name]-[hash:6].[ext]",
 					limit: 10000
 				}
-			}, 
+			},
 			{
 				test: /\.png$/,
 				loader: "url-loader",
@@ -62,7 +63,7 @@ module.exports = {
 					name: "images/[name]-[hash:6].[ext]",
 					limit: 10000
 				}
-			}, 
+			},
 			{
 				test: /\.jpg$/,
 				loader: "file-loader",
@@ -78,7 +79,7 @@ module.exports = {
 					limit: 10000,
 					prefix: "font/"
 				}
-			}, 
+			},
 			{
 				test: /\.(ttf|eot)$/,
 				loader: "file-loader",
