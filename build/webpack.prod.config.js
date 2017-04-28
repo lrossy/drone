@@ -31,8 +31,6 @@ module.exports = merge(baseWpConfig, {
 				loader: ExtractTextPlugin.extract({
 					fallbackLoader: "style-loader",
 					loader: [{
-						loader: "style-loader"
-					}, {
 						loader: "css-loader",
 						options: {
 							modules: true
