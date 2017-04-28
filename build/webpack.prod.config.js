@@ -11,22 +11,7 @@ let ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = merge(baseWpConfig, {
 	module: {
 		rules: [
-			{
-				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract({
-					fallbackLoader: "style-loader",
-					loader: [{
-						loader: "css-loader",
-						options: {
-							modules: true
-						}
-					}, {
-						loader: "postcss-loader"
-					}, {
-						loader: "sass-loader"
-					}]
-				})
-			}, {
+		 {
 				test: /\.less$/,
 				loader: ExtractTextPlugin.extract({
 					fallbackLoader: "style-loader",
