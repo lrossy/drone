@@ -27,6 +27,21 @@ module.exports = merge(baseWpConfig, {
 					}]
 				})
 			}, {
+				test: /\.less$/,
+				loader: ExtractTextPlugin.extract({
+					fallbackLoader: "style-loader",
+					loader: [{
+						loader: "style-loader"
+					}, {
+						loader: "css-loader",
+						options: {
+							modules: true
+						}
+					}, {
+						loader: "less-loader"
+					}]
+				})
+			}, {
 				test: /\.vue$/,
 				loader: "vue-loader",
 				options: {
@@ -57,7 +72,7 @@ module.exports = merge(baseWpConfig, {
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: "vendor"
-		}),		
+		}),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false
