@@ -22,8 +22,7 @@ module.exports = {
 			"vue-websocket",
 			"apollo-client",
 			"graphql-tag",
-			"i18next",
-			"bootstrap-loader"
+			"i18next"
 		],
 		frontend: ["./client/frontend/main.js"]
 	},
