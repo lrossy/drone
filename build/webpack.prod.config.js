@@ -12,7 +12,7 @@ module.exports = merge(baseWpConfig, {
 	module: {
 		rules: [
 			{
-				test: /\.scss$/,
+				test: /\.less$/,
 				loader: ExtractTextPlugin.extract({
 					fallbackLoader: "style-loader",
 					loader: [{
@@ -22,16 +22,6 @@ module.exports = merge(baseWpConfig, {
 						}
 					}, {
 						loader: "postcss-loader"
-					}, {
-						loader: "sass-loader"
-					}]
-				})
-			}, {
-				test: /\.less$/,
-				loader: ExtractTextPlugin.extract({
-					fallbackLoader: "style-loader",
-					loader: [{
-						loader: "css-loader",
 					}, {
 						loader: "less-loader"
 					}]
